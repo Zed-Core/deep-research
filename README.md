@@ -4,7 +4,7 @@ A structured deep-research skill for AI agents. Six stages, one hard gate, zero 
 
 Most "research" from AI agents is a single search followed by a summary. This skill enforces a different discipline: confirm scope before spending tokens, build a factual foundation, go deep per item, then — critically — hunt for disagreement before presenting anything.
 
-Works with any agent that supports the [Agent Skills format](https://github.com/anthropics/skills) (SKILL.md with frontmatter), including OpenClaw and Claude Code.
+Works with any agent that supports the [Agent Skills format](https://github.com/anthropics/skills) (SKILL.md with frontmatter): OpenClaw, Claude Code, and OpenAI Codex.
 
 ## Why
 
@@ -36,6 +36,14 @@ cp -r deep-research ~/.openclaw/workspace/skills/
 git clone https://github.com/Zed-Core/deep-research.git
 cp -r deep-research ~/.claude/skills/
 ```
+
+**OpenAI Codex** (global — available in all projects):
+```bash
+git clone https://github.com/Zed-Core/deep-research.git
+cp -r deep-research ~/.codex/skills/
+```
+
+Or project-scoped: copy to `.codex/skills/` in the repo root instead. Codex auto-discovers the skill from its description; you can also invoke it explicitly with `$deep-research`.
 
 Or install via ClawHub (listing pending).
 
